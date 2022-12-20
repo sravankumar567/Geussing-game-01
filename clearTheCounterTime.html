@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear The Counter Time</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: skyblue;
+        }
+        .kumar{
+            margin-top: 20%;
+            margin-left: 43%;
+        }
+        .btnEl{
+            margin-top: 5%;
+            margin-left: 50%;
+            padding: 20px;
+            text-transform: uppercase;
+            border-radius: 15%;
+
+        }
+        .sppanEL{
+            
+            margin-top: 20%;
+            margin-left: 51%;
+            font-weight: 600;
+            font-size: 100px;
+
+        }
+        
+       
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="counter" id="hello"></div>
+
+
+
+    </div>
+
+
+
+    <script>
+    let hello=document.getElementById("hello");
+    let clear=document.createElement("h1");
+    clear.textContent="Clear The Counter Time";
+    clear.classList.add("kumar");
+    hello.appendChild(clear);
+
+
+    let spanEl=document.createElement("span");
+    spanEl.textContent="0";
+    spanEl.classList.add("sppanEL");
+    hello.appendChild(spanEl);
+
+    let btn=document.createElement("button");
+    btn.textContent="click";
+    btn.classList.add("btnEl");
+    hello.appendChild(btn);
+
+     let counter=0
+    
+    let kumar=
+       setInterval(function(){
+        counter=counter+1;
+        console.log(counter);
+        spanEl.textContent=counter;
+    
+        }, 1000);
+        
+      
+        btn.addEventListener('click',function(){
+            clearInterval(kumar)
+        });
+    
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
